@@ -75,11 +75,11 @@ function rouwenhorst(
     print_output=false
     )
 
-    ψ = sqrt(variance / (1 - lag_coefficient^2)) * sqrt(state_size - 1)
+    psi = sqrt(variance / (1 - lag_coefficient^2)) * sqrt(state_size - 1)
 
     states = Array{Float64}(undef, state_size)
-    states[state_size] = ψ
-    states[1] = -ψ
+    states[state_size] = psi
+    states[1] = -psi
     if print_output
         println("States:")
         println(states[1])
